@@ -38,7 +38,7 @@ body {
 
 canvas {
     animation: fadeIn 1s linear;
-    width: 750px;
+    width: 700px;
     height: 450px;
     background-color: white;
     border-radius: 20px;
