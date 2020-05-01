@@ -62,4 +62,33 @@ canvas {
     margin-top: 30px;
     margin-bottom: 50px;
     animation: fadeIn 1s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.control .control_btns {
+    margin-bottom: 20px;
+
+}
+
+#jsMode {
+    width: 45px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow:0 4px 6px rgb(102, 102, 102),0 1px 5px rgb(102, 102, 102);
+    cursor: pointer;
+    background-color: white;
+}
+
+#jsSave {
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow:0 4px 6px rgb(102, 102, 102),0 1px 5px rgb(102, 102, 102);
+    cursor: pointer;
+    background-color: white;
+}
+
+.control .control_range {
+    margin-bottom: 20px;
 }
