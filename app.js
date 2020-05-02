@@ -1,5 +1,6 @@
 const canvas = document.getElementById("js-canvas");
 const ctx = canvas.getContext("2d");
+const colors = document.getElementsByClassName("js-color")
 
 canvas.width = 700; //실제 canvas의 pixel size
 canvas.height = 450;//실제 canvas의 pixel size
@@ -34,6 +35,10 @@ function onMouseDown(event) {
     startPaint();
 }
 
+function clickColorChange(event) {
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
+}
 
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
@@ -41,3 +46,5 @@ if (canvas) {
     canvas.addEventListener("mouseup", paintStop);
     canvas.addEventListener("mouseleave", paintStop);
 }
+
+Array.from(colors).forEach(color => color.addEventListener("click" ,clickColorChange ));
