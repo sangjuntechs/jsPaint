@@ -24,3 +24,11 @@ app.js brush 사이즈를 input range값으로 변경하여 칠할 수 있게 �
 # 2020/05/03
 add app.js code
 캔버스의 ctx.fillStyle 및 fillRect를 통해서 fill버튼 클릭시 filling 조건문으로 캔버스 전체를 칠할 수 있는 코드 삽입.
+
+contextMenu의 preventDefault() 로 우클릭 방지
+
+canvas의 toDataURL을 통해 이미지의 방식을 정했고, link라는 a태그를 통해 저장 그리고 link.href 와 download를 통해 url에 저장된 이미지를 다운로드 받을 수 있는 기능을 세이브버튼의 click이벤트리스너로 구현하였다.
+
+**2020/05/03 javascript 캔버스 프로젝트 종료**
+
+html5의 canvas에 대한 많은 이해가 가능했다. 그 외에도 자바스크립트로 구현 가능한 많은 것들과 이벤트 리스너를 통한 많은 기능을 구현해 볼 수 있었던 것 같다.

@@ -4,10 +4,13 @@ const colors = document.getElementsByClassName("js-color")
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const START_COLOR = "rgb(0, 0, 0)";
+const saveImage = document.getElementById("jsSave");
 
 canvas.width = 700; //실제 canvas의 pixel size
 canvas.height = 450;//실제 canvas의 pixel size
 
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, 700, 450);
 ctx.strokeStyle = START_COLOR;
 ctx.lineWidth = 2.5;
 ctx.fillStyle = START_COLOR;
@@ -52,6 +55,17 @@ function handleCanvasClick() {
     if(filling) {
     ctx.fillRect(0, 0, 700 , 450);}
 }
+function handleCM(event) {
+    event.preventDefault();
+}
+
+function handleSaveImage(){
+    const image = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "exportImage";
+    link.click();
+}
 
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
@@ -59,6 +73,7 @@ if (canvas) {
     canvas.addEventListener("mouseup", paintStop);
     canvas.addEventListener("mouseleave", paintStop);
     canvas.addEventListener("click" , handleCanvasClick);
+    canvas.addEventListener("contextmenu", handleCM);
 }
 
 function handleChangeMode() {
@@ -79,4 +94,8 @@ if (range) {
 
 if (mode) {
     mode.addEventListener("click" , handleChangeMode);
+}
+
+if (saveImage) {
+    saveImage.addEventListener("click",handleSaveImage);
 }
