@@ -20,3 +20,7 @@ painting이 false일 때 Path를 가져와 offset 좌표값을 읽고 있다가 
 app.js add code : 각각의 컬러가 담긴 div에 클래스명을 추가해 Array 형식으로 만든 뒤 clickevent의 target으로 background컬러를 지목하여 strokeStyle을 그 div의 backgroundColor로 바꾸었다. 그 결과 밑에 팔레트의 div를 선택하면 그 div의 색상으로 바뀐 페인트를 칠할 수 있게 되었다.
 
 app.js brush 사이즈를 input range값으로 변경하여 칠할 수 있게 되었고, fill과 brush를 구분하기 위한 버튼 변경 작업을 하였다. range 값의 이벤트를 타겟으로 value값을 가져와 ctx.lineWidth의 값을 value값으로 변경하여 브러쉬 사이즈를 조정할 수 있는 기능을 추가.
+
+# 2020/05/03
+add app.js code
+캔버스의 ctx.fillStyle 및 fillRect를 통해서 fill버튼 클릭시 filling 조건문으로 캔버스 전체를 칠할 수 있는 코드 삽입.
